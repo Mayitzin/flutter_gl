@@ -28,10 +28,6 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-kotlin {
-    jvmToolchain 11
-}
-
 android {
     namespace 'com.github.mayitzin.flutter_gl'
     compileSdkVersion 33
@@ -51,6 +47,9 @@ android {
         targetCompatibility JavaVersion.VERSION_11
     }
 
+    kotlinOptions {
+        jvmTarget = '11'
+    }
 }
 
 dependencies {
